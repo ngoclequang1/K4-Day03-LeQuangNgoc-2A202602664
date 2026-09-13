@@ -5,7 +5,7 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:36:53.809847+00:00",
+    "started_at": "2026-09-13T08:38:29.406731+00:00",
     "step": 1,
     "action_type": "TOOL_EXECUTION",
     "thought": "Model selected query_pet_care; observable action summary, not hidden reasoning.",
@@ -78,8 +78,8 @@
     },
     "request_id": 1,
     "executed": true,
-    "llm_latency_ms": 2148.5,
-    "latency_ms": 0.27
+    "llm_latency_ms": 2165.02,
+    "latency_ms": 0.3
   },
   {
     "query": "Tra cứu lần tắm gần nhất và lịch hẹn hiện có của PET001.",
@@ -87,12 +87,12 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:36:53.809847+00:00",
+    "started_at": "2026-09-13T08:38:29.406731+00:00",
     "step": 2,
     "action_type": "FINAL_ANSWER",
     "thought": "Tổng hợp phản hồi từ ngữ cảnh và kết quả công cụ.",
-    "output": "Lần tắm gần nhất cho thú cưng Mít (PET001) là vào ngày 01/09/2026. Hiện có lịch hẹn cắt tỉa lông vào ngày 20/09/2026 từ 10:00 đến 11:00 với giá 220.000 VNĐ. \n\nCó thể đặt lịch tắm vào:\n1. Ngày 20/09/2026 từ 14:30 đến 15:30 với giá 150.000 VNĐ (không xung đột).\n2. Ngày 20/09/2026 từ 16:00 đến 17:00 với giá 180.000 VNĐ (không xung đột).\n\nBạn muốn đặt lịch tắm vào khung giờ nào?",
-    "latency_ms": 1806.46
+    "output": "Lần tắm gần nhất của Mít (PET001) diễn ra vào ngày 01 tháng 09 năm 2026. Hiện tại Mít có một lịch hẹn cắt tỉa lông vào ngày 20 tháng 09 năm 2026 từ 10:00 đến 11:00.\n\nCó 3 khung giờ tắm tiếp theo:\n1. 20 tháng 09 năm 2026 từ 10:30 đến 11:30 (xung đột với lịch đã đặt).\n2. 20 tháng 09 năm 2026 từ 14:30 đến 15:30 (không xung đột, giá 150.000 VND).\n3. 20 tháng 09 năm 2026 từ 16:00 đến 17:00 (không xung đột, giá 180.000 VND).\n\nBạn có muốn đặt lịch tắm cho Mít vào khung giờ nào?",
+    "latency_ms": 2035.69
   },
   {
     "query": "Tôi là Ngọc. Tra cứu lần tắm gần nhất của PET001 rồi đặt lịch tắm ngày 20/09/2026 sau 14:00, không quá 200.000 đồng.",
@@ -100,7 +100,7 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:36:57.768218+00:00",
+    "started_at": "2026-09-13T08:38:33.611113+00:00",
     "step": 1,
     "action_type": "TOOL_EXECUTION",
     "thought": "Model selected query_pet_care; observable action summary, not hidden reasoning.",
@@ -173,8 +173,8 @@
     },
     "request_id": 1,
     "executed": true,
-    "llm_latency_ms": 762.78,
-    "latency_ms": 0.24
+    "llm_latency_ms": 859.11,
+    "latency_ms": 0.33
   },
   {
     "query": "Tôi là Ngọc. Tra cứu lần tắm gần nhất của PET001 rồi đặt lịch tắm ngày 20/09/2026 sau 14:00, không quá 200.000 đồng.",
@@ -182,7 +182,7 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:36:57.768218+00:00",
+    "started_at": "2026-09-13T08:38:33.611113+00:00",
     "step": 2,
     "action_type": "TOOL_EXECUTION",
     "thought": "Model selected schedule_pet_care; observable action summary, not hidden reasoning.",
@@ -207,8 +207,8 @@
     },
     "request_id": 2,
     "executed": true,
-    "llm_latency_ms": 1233.07,
-    "latency_ms": 0.18
+    "llm_latency_ms": 884.97,
+    "latency_ms": 0.34
   },
   {
     "query": "Tôi là Ngọc. Tra cứu lần tắm gần nhất của PET001 rồi đặt lịch tắm ngày 20/09/2026 sau 14:00, không quá 200.000 đồng.",
@@ -216,12 +216,12 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:36:57.768218+00:00",
+    "started_at": "2026-09-13T08:38:33.611113+00:00",
     "step": 3,
     "action_type": "FINAL_ANSWER",
     "thought": "Tổng hợp phản hồi từ ngữ cảnh và kết quả công cụ.",
-    "output": "Đã đặt lịch tắm cho PET001 (Mít) vào ngày 20/09/2026, từ 14:30 đến 15:30. Giá dịch vụ là 150.000 VNĐ. Mã lịch hẹn: PC-0002.",
-    "latency_ms": 1061.18
+    "output": "Đã đặt lịch tắm cho PET001 (Mít) vào ngày 20/09/2026 từ 14:30 đến 15:30, giá 150.000 đồng. Mã lịch hẹn: PC-0002. Cảm ơn bạn, Ngọc!",
+    "latency_ms": 1061.47
   },
   {
     "query": "Tôi là Ngọc. Tra cứu rồi đặt lịch tắm cho PET001 đúng 10:30 ngày 20/09/2026. Nếu trùng lịch thì chỉ đề xuất, không tự đặt giờ khác.",
@@ -229,7 +229,7 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:37:00.829306+00:00",
+    "started_at": "2026-09-13T08:38:36.419356+00:00",
     "step": 1,
     "action_type": "TOOL_EXECUTION",
     "thought": "Model selected query_pet_care; observable action summary, not hidden reasoning.",
@@ -304,7 +304,7 @@
     },
     "request_id": 1,
     "executed": true,
-    "llm_latency_ms": 991.87,
+    "llm_latency_ms": 1080.16,
     "latency_ms": 0.48
   },
   {
@@ -313,12 +313,12 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:37:00.829306+00:00",
+    "started_at": "2026-09-13T08:38:36.419356+00:00",
     "step": 2,
     "action_type": "FINAL_ANSWER",
     "thought": "Tổng hợp phản hồi từ ngữ cảnh và kết quả công cụ.",
-    "output": "Ngày 20/09/2026, lịch tắm cho PET001 sẽ bị trùng với lịch cắt tỉa lông lúc 10:00. Tôi đề xuất hai khung giờ tắm khác:\n\n1. 14:30 - 15:30 (giá 150000 VND)\n2. 16:00 - 17:00 (giá 180000 VND)\n\nBạn muốn đặt lịch tắm vào khung giờ nào?",
-    "latency_ms": 1229.63
+    "output": "Lịch tắm cho Mít vào lúc 10:30 ngày 20/09/2026 không thể đặt được vì có xung đột với lịch hẹn cắt tỉa lông lúc 10:00 cùng ngày. \n\nTôi có thể đề xuất các khung giờ tắm khác như sau:\n- 14:30 - 15:30 (giá 150000 VNĐ)\n- 16:00 - 17:00 (giá 180000 VNĐ)\n\nBạn muốn đặt lịch tắm vào khung giờ nào?",
+    "latency_ms": 1577.74
   },
   {
     "query": "Tôi là Ngọc. Đặt lịch tắm cho thú cưng của tôi ngày 20/09/2026 sau 14:00, không quá 200.000 đồng.",
@@ -326,38 +326,12 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:37:03.052953+00:00",
+    "started_at": "2026-09-13T08:38:39.079259+00:00",
     "step": 1,
-    "action_type": "TOOL_EXECUTION",
-    "thought": "Model selected query_pet_care; observable action summary, not hidden reasoning.",
-    "tool_name": "query_pet_care",
-    "arguments": {
-      "pet_id": "PET001",
-      "service_type": "bath",
-      "date_from": "2026-09-20",
-      "date_to": "2026-09-20"
-    },
-    "observation": {
-      "status": "CLARIFICATION_REQUIRED",
-      "message": "Mã thú cưng chưa được người dùng cung cấp. Hỏi mã thú cưng; không đoán từ ví dụ schema."
-    },
-    "request_id": null,
-    "executed": false,
-    "llm_latency_ms": 971.08,
-    "latency_ms": 0.0
-  },
-  {
-    "query": "Tôi là Ngọc. Đặt lịch tắm cho thú cưng của tôi ngày 20/09/2026 sau 14:00, không quá 200.000 đồng.",
-    "case_id": "TC04",
-    "provider": "OpenAIProvider",
-    "model": "gpt-4o-mini",
-    "is_mock": false,
-    "started_at": "2026-09-13T08:37:03.052953+00:00",
-    "step": 2,
     "action_type": "FINAL_ANSWER",
     "thought": "Tổng hợp phản hồi từ ngữ cảnh và kết quả công cụ.",
-    "output": "Xin lỗi, tôi cần mã thú cưng của bạn để tiến hành tìm lịch tắm cho thú cưng. Bạn có thể cung cấp mã đó không?",
-    "latency_ms": 858.52
+    "output": "Xin bạn cung cấp mã thú cưng của bạn để tôi có thể tra cứu lịch cho bạn.",
+    "latency_ms": 797.62
   },
   {
     "query": "Tôi là Ngọc. Tra cứu và đặt lịch tắm cho PET001 vào khung giờ sớm nhất phù hợp ngày 20/09/2026 sau 14:00, không quá 200.000 đồng. Hãy tự chọn trong các khung giờ đáp ứng điều kiện. Chỉ nếu công cụ đặt lịch trả SLOT_UNAVAILABLE thì tra cứu lại và đề xuất giờ khác, không tự đặt lại.",
@@ -365,7 +339,7 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:37:04.885000+00:00",
+    "started_at": "2026-09-13T08:38:39.879971+00:00",
     "step": 1,
     "action_type": "TOOL_EXECUTION",
     "thought": "Model selected query_pet_care; observable action summary, not hidden reasoning.",
@@ -440,8 +414,8 @@
     },
     "request_id": 1,
     "executed": true,
-    "llm_latency_ms": 866.3,
-    "latency_ms": 0.47
+    "llm_latency_ms": 1009.9,
+    "latency_ms": 0.73
   },
   {
     "query": "Tôi là Ngọc. Tra cứu và đặt lịch tắm cho PET001 vào khung giờ sớm nhất phù hợp ngày 20/09/2026 sau 14:00, không quá 200.000 đồng. Hãy tự chọn trong các khung giờ đáp ứng điều kiện. Chỉ nếu công cụ đặt lịch trả SLOT_UNAVAILABLE thì tra cứu lại và đề xuất giờ khác, không tự đặt lại.",
@@ -449,7 +423,7 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:37:04.885000+00:00",
+    "started_at": "2026-09-13T08:38:39.879971+00:00",
     "step": 2,
     "action_type": "TEST_SETUP",
     "description": "Simulated competing booking immediately before agent booking.",
@@ -473,7 +447,7 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:37:04.885000+00:00",
+    "started_at": "2026-09-13T08:38:39.879971+00:00",
     "step": 2,
     "action_type": "TOOL_EXECUTION",
     "thought": "Model selected schedule_pet_care; observable action summary, not hidden reasoning.",
@@ -489,7 +463,7 @@
     },
     "request_id": 2,
     "executed": true,
-    "llm_latency_ms": 823.2,
+    "llm_latency_ms": 867.83,
     "latency_ms": 0.06
   },
   {
@@ -498,7 +472,7 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:37:04.885000+00:00",
+    "started_at": "2026-09-13T08:38:39.879971+00:00",
     "step": 3,
     "action_type": "TOOL_EXECUTION",
     "thought": "Model selected query_pet_care; observable action summary, not hidden reasoning.",
@@ -564,8 +538,8 @@
     },
     "request_id": 3,
     "executed": true,
-    "llm_latency_ms": 973.85,
-    "latency_ms": 0.36
+    "llm_latency_ms": 897.79,
+    "latency_ms": 0.42
   },
   {
     "query": "Tôi là Ngọc. Tra cứu và đặt lịch tắm cho PET001 vào khung giờ sớm nhất phù hợp ngày 20/09/2026 sau 14:00, không quá 200.000 đồng. Hãy tự chọn trong các khung giờ đáp ứng điều kiện. Chỉ nếu công cụ đặt lịch trả SLOT_UNAVAILABLE thì tra cứu lại và đề xuất giờ khác, không tự đặt lại.",
@@ -573,11 +547,11 @@
     "provider": "OpenAIProvider",
     "model": "gpt-4o-mini",
     "is_mock": false,
-    "started_at": "2026-09-13T08:37:04.885000+00:00",
+    "started_at": "2026-09-13T08:38:39.879971+00:00",
     "step": 4,
     "action_type": "FINAL_ANSWER",
     "thought": "Tổng hợp phản hồi từ ngữ cảnh và kết quả công cụ.",
-    "output": "Hiện tại, khung giờ sớm nhất cho dịch vụ tắm cho Mít vào ngày 20/09/2026 là lúc 16:00 - 17:00 với mức giá 180.000 đồng. \n\nBạn có muốn đặt lịch cho khung giờ này không?",
-    "latency_ms": 993.17
+    "output": "Hiện không thể đặt lịch tắm cho Mít vào khung giờ mà bạn đã yêu cầu. \n\nTuy nhiên, vẫn còn khung giờ phù hợp trống cho dịch vụ tắm vào ngày 20/09/2026:\n- 16:00 - 17:00 với giá 180.000 đồng.\n\nBạn có muốn chọn khung giờ này không?",
+    "latency_ms": 1188.82
   }
 ]
