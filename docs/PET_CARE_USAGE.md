@@ -14,6 +14,17 @@
 
 Theo README, sử dụng Python 3.10–3.12 và cài `requirements.txt` trong môi trường ảo.
 
+**Môi trường đã kiểm tra trên máy này:** `.venv310` dùng Python **3.10.11**, đạt 10 unit tests, 5 test offline và 5 test OpenAI live. Kích hoạt môi trường này trước khi chạy:
+
+```powershell
+.\.venv310\Scripts\Activate.ps1
+python --version
+python -m unittest discover -s tests -v
+python src/app.py --all --require-live
+```
+
+Nếu không kích hoạt môi trường, dùng trực tiếp `.\.venv310\Scripts\python.exe` thay cho `.\.venv\Scripts\python.exe` trong các lệnh bên dưới. `.venv` cũ vẫn dùng Python 3.14.2. Kết quả kiểm tra tương thích và danh sách phiên bản thư viện được lưu trong `docs/python310/`.
+
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe src/mcp_server.py

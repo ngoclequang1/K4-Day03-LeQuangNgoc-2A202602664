@@ -1,0 +1,39 @@
+{
+  "provider": "MockOfflineProvider",
+  "model": "pet-care-offline-simulator",
+  "is_mock": true,
+  "passed": 5,
+  "total": 5,
+  "results": [
+    {
+      "id": "TC01",
+      "passed": true,
+      "tool_calls": 1,
+      "note": "Automated tool/state checks; final wording also requires review."
+    },
+    {
+      "id": "TC02",
+      "passed": true,
+      "tool_calls": 2,
+      "note": "Automated tool/state checks; final wording also requires review."
+    },
+    {
+      "id": "TC03",
+      "passed": true,
+      "tool_calls": 1,
+      "note": "Automated tool/state checks; final wording also requires review."
+    },
+    {
+      "id": "TC04",
+      "passed": true,
+      "tool_calls": 0,
+      "note": "Automated tool/state checks; final wording also requires review."
+    },
+    {
+      "id": "TC05",
+      "passed": true,
+      "tool_calls": 3,
+      "note": "Automated tool/state checks; final wording also requires review."
+    }
+  ]
+}

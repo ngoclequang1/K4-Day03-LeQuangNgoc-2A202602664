@@ -1,6 +1,7 @@
 """In-process MCP-style lab simulator; not a network MCP transport."""
 import itertools
 import json
+import sys
 from tools import TOOLS_SCHEMA, PetCareStore, dispatch_tool_call
 
 
@@ -21,6 +22,8 @@ class MCPPetCareServer:
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     store = PetCareStore(":memory:")
     server = MCPPetCareServer(store)
     print(f"MCP Server: {server.server_name}; Tools: {len(server.list_tools())}")
