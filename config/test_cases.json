@@ -1,0 +1,43 @@
+[
+  {
+    "id": "TC01",
+    "type": "single_tool_query",
+    "question": "Tra cứu lần tắm gần nhất và lịch hẹn hiện có của PET001.",
+    "expected_behavior": "Tra cứu hồ sơ PET001; không tạo lịch hẹn.",
+    "complexity": "Medium",
+    "expected": "lookup"
+  },
+  {
+    "id": "TC02",
+    "type": "multi_step_booking",
+    "question": "Tôi là Ngọc. Tra cứu lần tắm gần nhất của PET001 rồi đặt lịch tắm ngày 20/09/2026 sau 14:00, không quá 200.000 đồng.",
+    "expected_behavior": "Tra cứu trước, đặt khung giờ phù hợp và trả mã lịch hẹn.",
+    "complexity": "High",
+    "expected": "booking"
+  },
+  {
+    "id": "TC03",
+    "type": "schedule_conflict",
+    "question": "Tôi là Ngọc. Tra cứu rồi đặt lịch tắm cho PET001 đúng 10:30 ngày 20/09/2026. Nếu trùng lịch thì chỉ đề xuất, không tự đặt giờ khác.",
+    "expected_behavior": "Nhận biết lịch cắt tỉa 10:00–11:00, không tạo lịch chồng chéo.",
+    "complexity": "High",
+    "expected": "conflict"
+  },
+  {
+    "id": "TC04",
+    "type": "missing_information",
+    "question": "Tôi là Ngọc. Đặt lịch tắm cho thú cưng của tôi ngày 20/09/2026 sau 14:00, không quá 200.000 đồng.",
+    "expected_behavior": "Hỏi mã thú cưng; không đoán mã hoặc tạo lịch.",
+    "complexity": "Medium",
+    "expected": "clarification"
+  },
+  {
+    "id": "TC05",
+    "type": "slot_race",
+    "question": "Tôi là Ngọc. Tra cứu và đặt lịch tắm cho PET001 vào khung giờ sớm nhất phù hợp ngày 20/09/2026 sau 14:00, không quá 200.000 đồng. Hãy tự chọn trong các khung giờ đáp ứng điều kiện. Chỉ nếu công cụ đặt lịch trả SLOT_UNAVAILABLE thì tra cứu lại và đề xuất giờ khác, không tự đặt lại.",
+    "expected_behavior": "Harness chiếm khung giờ ngay trước đặt; Agent nhận SLOT_UNAVAILABLE, tra cứu lại, không báo đặt thành công.",
+    "complexity": "High",
+    "expected": "race",
+    "simulate_slot_race": true
+  }
+]

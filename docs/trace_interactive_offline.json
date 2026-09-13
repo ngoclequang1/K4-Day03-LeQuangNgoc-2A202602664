@@ -1,0 +1,95 @@
+[
+  {
+    "query": "Tra c?u PET001",
+    "case_id": null,
+    "provider": "MockOfflineProvider",
+    "model": "pet-care-offline-simulator",
+    "is_mock": true,
+    "started_at": "2026-09-13T08:16:12.122634+00:00",
+    "step": 1,
+    "action_type": "TOOL_EXECUTION",
+    "thought": "Model selected query_pet_care; observable action summary, not hidden reasoning.",
+    "tool_name": "query_pet_care",
+    "arguments": {
+      "pet_id": "PET001"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "pet": {
+        "pet_id": "PET001",
+        "name": "Mít",
+        "species": "dog"
+      },
+      "care_history": [
+        {
+          "pet_id": "PET001",
+          "service_type": "brushing",
+          "performed_at": "2026-09-10T09:00:00"
+        },
+        {
+          "pet_id": "PET001",
+          "service_type": "bath",
+          "performed_at": "2026-09-01T10:00:00"
+        }
+      ],
+      "appointments": [
+        {
+          "booking_id": 1,
+          "pet_id": "PET001",
+          "slot_id": "SLOT003",
+          "owner_name": "Ngọc",
+          "service_type": "grooming",
+          "starts_at": "2026-09-20T10:00:00",
+          "ends_at": "2026-09-20T11:00:00",
+          "price_vnd": 220000
+        }
+      ],
+      "available_slots": [
+        {
+          "slot_id": "SLOT004",
+          "service_type": "bath",
+          "species": "dog",
+          "starts_at": "2026-09-20T10:30:00",
+          "ends_at": "2026-09-20T11:30:00",
+          "price_vnd": 150000,
+          "conflicts_with_pet": true
+        },
+        {
+          "slot_id": "SLOT001",
+          "service_type": "bath",
+          "species": "dog",
+          "starts_at": "2026-09-20T14:30:00",
+          "ends_at": "2026-09-20T15:30:00",
+          "price_vnd": 150000,
+          "conflicts_with_pet": false
+        },
+        {
+          "slot_id": "SLOT002",
+          "service_type": "bath",
+          "species": "dog",
+          "starts_at": "2026-09-20T16:00:00",
+          "ends_at": "2026-09-20T17:00:00",
+          "price_vnd": 180000,
+          "conflicts_with_pet": false
+        }
+      ],
+      "timezone": "Asia/Bangkok"
+    },
+    "request_id": 1,
+    "llm_latency_ms": 0.11,
+    "latency_ms": 0.7
+  },
+  {
+    "query": "Tra c?u PET001",
+    "case_id": null,
+    "provider": "MockOfflineProvider",
+    "model": "pet-care-offline-simulator",
+    "is_mock": true,
+    "started_at": "2026-09-13T08:16:12.122634+00:00",
+    "step": 2,
+    "action_type": "FINAL_ANSWER",
+    "thought": "Tổng hợp phản hồi từ ngữ cảnh và kết quả công cụ.",
+    "output": "{\"status\": \"SUCCESS\", \"pet\": {\"pet_id\": \"PET001\", \"name\": \"Mít\", \"species\": \"dog\"}, \"care_history\": [{\"pet_id\": \"PET001\", \"service_type\": \"brushing\", \"performed_at\": \"2026-09-10T09:00:00\"}, {\"pet_id\": \"PET001\", \"service_type\": \"bath\", \"performed_at\": \"2026-09-01T10:00:00\"}], \"appointments\": [{\"booking_id\": 1, \"pet_id\": \"PET001\", \"slot_id\": \"SLOT003\", \"owner_name\": \"Ngọc\", \"service_type\": \"grooming\", \"starts_at\": \"2026-09-20T10:00:00\", \"ends_at\": \"2026-09-20T11:00:00\", \"price_vnd\": 220000}], \"available_slots\": [{\"slot_id\": \"SLOT004\", \"service_type\": \"bath\", \"species\": \"dog\", \"starts_at\": \"2026-09-20T10:30:00\", \"ends_at\": \"2026-09-20T11:30:00\", \"price_vnd\": 150000, \"conflicts_with_pet\": true}, {\"slot_id\": \"SLOT001\", \"service_type\": \"bath\", \"species\": \"dog\", \"starts_at\": \"2026-09-20T14:30:00\", \"ends_at\": \"2026-09-20T15:30:00\", \"price_vnd\": 150000, \"conflicts_with_pet\": false}, {\"slot_id\": \"SLOT002\", \"service_type\": \"bath\", \"species\": \"dog\", \"starts_at\": \"2026-09-20T16:00:00\", \"ends_at\": \"2026-09-20T17:00:00\", \"price_vnd\": 180000, \"conflicts_with_pet\": false}], \"timezone\": \"Asia/Bangkok\"}",
+    "latency_ms": 0.04
+  }
+]

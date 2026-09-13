@@ -1,0 +1,172 @@
+[
+  {
+    "query": "My name is Ngoc. Book the earliest bath slot on 2026-09-20 after 14:00 under 200000 VND for my pet.",
+    "case_id": null,
+    "provider": "OpenAIProvider",
+    "model": "gpt-4o-mini",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:22:38.876831+00:00",
+    "step": 1,
+    "action_type": "TOOL_EXECUTION",
+    "thought": "Model selected query_pet_care; observable action summary, not hidden reasoning.",
+    "tool_name": "query_pet_care",
+    "arguments": {
+      "pet_id": "PET001",
+      "service_type": "bath",
+      "date_from": "2026-09-20",
+      "date_to": "2026-09-20"
+    },
+    "observation": {
+      "status": "CLARIFICATION_REQUIRED",
+      "message": "Mã thú cưng chưa được người dùng cung cấp. Hỏi mã thú cưng; không đoán từ ví dụ schema."
+    },
+    "request_id": null,
+    "executed": false,
+    "llm_latency_ms": 2513.53,
+    "latency_ms": 0.0
+  },
+  {
+    "query": "My name is Ngoc. Book the earliest bath slot on 2026-09-20 after 14:00 under 200000 VND for my pet.",
+    "case_id": null,
+    "provider": "OpenAIProvider",
+    "model": "gpt-4o-mini",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:22:38.876831+00:00",
+    "step": 2,
+    "action_type": "FINAL_ANSWER",
+    "thought": "Tổng hợp phản hồi từ ngữ cảnh và kết quả công cụ.",
+    "output": "Xin vui lòng cung cấp mã thú cưng của bạn để tôi có thể tra cứu khung giờ tắm cho bạn.",
+    "latency_ms": 1551.85
+  },
+  {
+    "query": "The pet ID is PET001. Please complete the booking now.",
+    "case_id": null,
+    "provider": "OpenAIProvider",
+    "model": "gpt-4o-mini",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:22:42.943969+00:00",
+    "step": 1,
+    "action_type": "TOOL_EXECUTION",
+    "thought": "Model selected query_pet_care; observable action summary, not hidden reasoning.",
+    "tool_name": "query_pet_care",
+    "arguments": {
+      "pet_id": "PET001",
+      "service_type": "bath",
+      "date_from": "2026-09-20",
+      "date_to": "2026-09-20"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "pet": {
+        "pet_id": "PET001",
+        "name": "Mít",
+        "species": "dog"
+      },
+      "care_history": [
+        {
+          "pet_id": "PET001",
+          "service_type": "brushing",
+          "performed_at": "2026-09-10T09:00:00"
+        },
+        {
+          "pet_id": "PET001",
+          "service_type": "bath",
+          "performed_at": "2026-09-01T10:00:00"
+        }
+      ],
+      "appointments": [
+        {
+          "booking_id": 1,
+          "pet_id": "PET001",
+          "slot_id": "SLOT003",
+          "owner_name": "Ngọc",
+          "service_type": "grooming",
+          "starts_at": "2026-09-20T10:00:00",
+          "ends_at": "2026-09-20T11:00:00",
+          "price_vnd": 220000
+        }
+      ],
+      "available_slots": [
+        {
+          "slot_id": "SLOT004",
+          "service_type": "bath",
+          "species": "dog",
+          "starts_at": "2026-09-20T10:30:00",
+          "ends_at": "2026-09-20T11:30:00",
+          "price_vnd": 150000,
+          "conflicts_with_pet": true
+        },
+        {
+          "slot_id": "SLOT001",
+          "service_type": "bath",
+          "species": "dog",
+          "starts_at": "2026-09-20T14:30:00",
+          "ends_at": "2026-09-20T15:30:00",
+          "price_vnd": 150000,
+          "conflicts_with_pet": false
+        },
+        {
+          "slot_id": "SLOT002",
+          "service_type": "bath",
+          "species": "dog",
+          "starts_at": "2026-09-20T16:00:00",
+          "ends_at": "2026-09-20T17:00:00",
+          "price_vnd": 180000,
+          "conflicts_with_pet": false
+        }
+      ],
+      "timezone": "Asia/Bangkok"
+    },
+    "request_id": 1,
+    "executed": true,
+    "llm_latency_ms": 1526.18,
+    "latency_ms": 0.66
+  },
+  {
+    "query": "The pet ID is PET001. Please complete the booking now.",
+    "case_id": null,
+    "provider": "OpenAIProvider",
+    "model": "gpt-4o-mini",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:22:42.943969+00:00",
+    "step": 2,
+    "action_type": "TOOL_EXECUTION",
+    "thought": "Model selected schedule_pet_care; observable action summary, not hidden reasoning.",
+    "tool_name": "schedule_pet_care",
+    "arguments": {
+      "pet_id": "PET001",
+      "slot_id": "SLOT001",
+      "owner_name": "Ngọc"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "PC-0002",
+      "pet_id": "PET001",
+      "owner_name": "Ngọc",
+      "slot_id": "SLOT001",
+      "service_type": "bath",
+      "species": "dog",
+      "starts_at": "2026-09-20T14:30:00",
+      "ends_at": "2026-09-20T15:30:00",
+      "price_vnd": 150000,
+      "message": "Đã lưu lịch chăm sóc thú cưng."
+    },
+    "request_id": 2,
+    "executed": true,
+    "llm_latency_ms": 1304.69,
+    "latency_ms": 7.11
+  },
+  {
+    "query": "The pet ID is PET001. Please complete the booking now.",
+    "case_id": null,
+    "provider": "OpenAIProvider",
+    "model": "gpt-4o-mini",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:22:42.943969+00:00",
+    "step": 3,
+    "action_type": "FINAL_ANSWER",
+    "thought": "Tổng hợp phản hồi từ ngữ cảnh và kết quả công cụ.",
+    "output": "Lịch tắm cho thú cưng của bạn đã được đặt thành công! \n\n- Mã lịch: PC-0002\n- Thời gian: 14:30 - 15:30 ngày 20/09/2026\n- Giá: 150,000 VND\n\nCảm ơn bạn, Ngọc!",
+    "latency_ms": 1477.11
+  }
+]

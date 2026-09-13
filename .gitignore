@@ -1,5 +1,6 @@
 # Python Virtual Environment & Caches
 .venv/
+.venv310/
 venv/
 ENV/
 __pycache__/
@@ -8,6 +9,7 @@ __pycache__/
 
 # Environment Variables & Keys
 .env
+data/*.sqlite3*
 
 # System & IDE files
 .DS_Store

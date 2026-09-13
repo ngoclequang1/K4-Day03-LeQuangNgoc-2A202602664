@@ -1,0 +1,62 @@
+[
+  {
+    "query": "Tra cứu lần tắm gần nhất và lịch hẹn hiện có của PET001.",
+    "case_id": "TC01",
+    "provider": "GeminiProvider",
+    "model": "gemini-2.5-flash",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:15:08.473752+00:00",
+    "step": 1,
+    "action_type": "ERROR",
+    "output": "Provider request failed: ConnectError",
+    "latency_ms": 306.39
+  },
+  {
+    "query": "Tôi là Ngọc. Tra cứu lần tắm gần nhất của PET001 rồi đặt lịch tắm ngày 20/09/2026 sau 14:00, không quá 200.000 đồng.",
+    "case_id": "TC02",
+    "provider": "GeminiProvider",
+    "model": "gemini-2.5-flash",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:15:08.781156+00:00",
+    "step": 1,
+    "action_type": "ERROR",
+    "output": "Provider request failed: ConnectError",
+    "latency_ms": 366.42
+  },
+  {
+    "query": "Tôi là Ngọc. Tra cứu rồi đặt lịch tắm cho PET001 đúng 10:30 ngày 20/09/2026. Nếu trùng lịch thì chỉ đề xuất, không tự đặt giờ khác.",
+    "case_id": "TC03",
+    "provider": "GeminiProvider",
+    "model": "gemini-2.5-flash",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:15:09.148735+00:00",
+    "step": 1,
+    "action_type": "ERROR",
+    "output": "Provider request failed: ConnectError",
+    "latency_ms": 191.36
+  },
+  {
+    "query": "Tôi là Ngọc. Đặt lịch tắm cho thú cưng của tôi ngày 20/09/2026 sau 14:00, không quá 200.000 đồng.",
+    "case_id": "TC04",
+    "provider": "GeminiProvider",
+    "model": "gemini-2.5-flash",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:15:09.342191+00:00",
+    "step": 1,
+    "action_type": "ERROR",
+    "output": "Provider request failed: ConnectError",
+    "latency_ms": 166.71
+  },
+  {
+    "query": "Tôi là Ngọc. Tra cứu và đặt lịch tắm cho PET001 ngày 20/09/2026 sau 14:00, không quá 200.000 đồng. Nếu khung giờ vừa hết chỗ, tra cứu lại và chỉ đề xuất giờ khác.",
+    "case_id": "TC05",
+    "provider": "GeminiProvider",
+    "model": "gemini-2.5-flash",
+    "is_mock": false,
+    "started_at": "2026-09-13T08:15:09.510741+00:00",
+    "step": 1,
+    "action_type": "ERROR",
+    "output": "Provider request failed: ConnectError",
+    "latency_ms": 521.33
+  }
+]
