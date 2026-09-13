@@ -109,7 +109,7 @@ Các trường `thought` mô tả hành động quan sát được, không phả
 - [x] Chạy interactive bằng OpenAI: hỏi mã thú cưng còn thiếu, giữ ngữ cảnh lượt trước, đặt thành công sau khi nhận PET001. Bằng chứng: `docs/trace_interactive_live.json`.
 - [x] **Đã kiểm tra tương thích Python 3.10.11** bằng môi trường riêng `.venv310`, đáp ứng yêu cầu Python 3.10–3.12 của README: **10/10 unit tests**, **5/5 offline**, **5/5 OpenAI live**; `pip check` không phát hiện xung đột phụ thuộc. Trace và kết quả lần chạy này nằm trong `docs/python310/`. Đã sửa encoding UTF-8 để lệnh kiểm tra MCP server in tiếng Việt trên Windows thành công. Chưa kiểm tra riêng Python 3.11 hoặc 3.12.
 - **Hướng dẫn chạy lại:** `docs/PET_CARE_USAGE.md`. Lệnh nghiệm thu: `python src/app.py --all --require-live`.
-- **Kết quả đẩy Repo nộp bài:** [ ] Đã Commit và Push mã nguồn thành công lên GitHub cá nhân.
+- **Kết quả đẩy Repo nộp bài:** [x] Đã Commit và Push mã nguồn thành công lên GitHub cá nhân.
 
 ---
 
